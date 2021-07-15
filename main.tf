@@ -15,6 +15,3 @@ output "EIP" {
   value = aws_eip.elasticip.public_ip
 }
 
-resource "aws_vpc" "myvpc" {
-   value
-}
