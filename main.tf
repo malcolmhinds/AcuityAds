@@ -15,7 +15,7 @@ variable "egress" {
 resource "aws_instance" "db" {
   ami = "ami-0db72f413fc1ddb2a"
   instance_type = "t2.micro"
-  tags {
+  tags = {
     Name = "DB Server"
   }
   security_groups = [aws_security_group.webtraffic.name]
@@ -25,7 +25,7 @@ resource "aws_instance" "web" {
   ami = "ami-0db72f413fc1ddb2a"
   instance_type = "t2.micro"
   user_data = file("server-script.sh")
-  tags {
+  tags = {
     Name = "Web Server"
   }
   security_groups = [aws_security_group.webtraffic.name]
