@@ -5,6 +5,9 @@
 *.tfstate
 *.tfstate.*
 
+#.lock.hcl files
+*.lock.hcl
+
 #Ignore Linux Swap files
 *.swp
 
