@@ -11,5 +11,5 @@ resource "aws_instance" "db" {
 }
 
 output "instance_id" {
-    value = aws_instance.ec2.id
+    value = aws_instance.db.id
 }
