@@ -11,3 +11,17 @@ resource "aws_instance" "web" {
   }
   security_groups = [aws_security_group.webtraffic.name]
 }
+
+module "sg" {
+  source = "../sg"
+  sg_name = "Allow Web Traffic"
+}
+
+module "eip" {
+  source = "../eip"
+   instance_id = aws_instance.web.id
+}
+
+output "web_output" {
+    value = moodule.ec2module.instance_id
+}
