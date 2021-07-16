@@ -7,5 +7,5 @@ resource "aws_eip" "web_ip" {
 }
 
 output "PublicIP" {
-  value = aws_eip.we_ip.public_ip
+  value = aws_eip.web_ip.public_ip
 }
