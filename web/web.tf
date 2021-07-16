@@ -7,14 +7,13 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
   user_data = file("server-script.sh")
   tags = {
-    Name = "Web Server"
+    Name = var.web_name
   }
-  security_groups = [aws_security_group.webtraffic.name]
+  security_groups = [module.sg.sg_name]
 }
 
 module "sg" {
   source = "../sg"
-  sg_name = "Allow Web Traffic"
 }
 
 module "eip" {
