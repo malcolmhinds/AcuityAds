@@ -8,7 +8,7 @@ module "db" {
 }
 
 module "web" {
-  source = "./ec2"
+  source = "./web"
   web_name = "Web Server"
 }
     
