@@ -10,7 +10,7 @@ variable "egress" {
 }
 
 output = "sg_name" {
-  value = "aws_security_group.web_traffic.name"
+  value = aws_security_group.web_traffic.name
 }
   
 resource "aws_security_group" "web_traffic" {
