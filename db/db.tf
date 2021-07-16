@@ -10,6 +10,6 @@ resource "aws_instance" "db" {
   }
 }
 
-output "Private_IP" {
+output "PrivateIP" {
     value = aws_instance.db.privateip
 }
