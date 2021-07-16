@@ -31,7 +31,7 @@ resource "aws_instance" "web" {
   security_groups = [aws_security_group.webtraffic.name]
 }
 
-resource "aws_eip" "elasticip" {
+resource "aws_eip" "web_ip" {
   instance = aws_instance.web.id
 }
 
@@ -56,8 +56,8 @@ resource "aws_security_group" "webtraffic" {
       to_port = port.value
       protocol = "TCP"
       cidr_blocks = ["0.0.0.0/0"]
-   }
- }
+    }
+  }
 }
 
 output "PrivateIP" {
