@@ -1,5 +1,5 @@
 variable "server_names" {
-    type = string
+    type = list(string)
 }
 
 resource "aws_instance" "db" {
