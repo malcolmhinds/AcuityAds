@@ -8,6 +8,9 @@
 #.lock.hcl files
 *.lock.hcl
 
+#.lock.hcl files
+backend.tf
+
 #Ignore Linux Swap files
 *.swp
 
