@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "db" {
-  source= "../Challenge3/db"
+  source= "./db"
   servce_names = ["mariadb","mysql","MSsql"]
   
 }
