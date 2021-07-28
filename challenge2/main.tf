@@ -16,7 +16,7 @@ resource "aws_instance" "db" {
   ami = "ami-0db72f413fc1ddb2a"
   instance_type = "t2.micro"
   tags = {
-    Name = "DB Server"
+    Name = "DB Server UPDATED"
   }
   security_groups = [aws_security_group.webtraffic.name]
 }
